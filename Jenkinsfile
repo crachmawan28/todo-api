@@ -24,6 +24,8 @@ pipeline {
             steps {
                 sh '''
                     cd /home/cr/docker-apps/mongodb
+		    git pull origin main
+            	    cd ..
                     docker compose down
                     docker compose up -d --build
                 '''
