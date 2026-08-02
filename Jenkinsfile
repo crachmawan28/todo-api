@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                    cd /home/cr/docker-apps/mongodb
+                    cd /home/cr/docker-apps/mongodb/app
 		    git pull origin main
             	    cd ..
                     docker compose down
